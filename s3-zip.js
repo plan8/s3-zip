@@ -48,8 +48,8 @@ s3Zip.archive = async function (opts) { //buckets, folder, filesS3, filesZip
 
 s3Zip.archiveStream = async function (stream, isLastOne, filesS3, filesZip, folder) {
   return new Promise((resolve, reject) => {
-    const self = this
-    const folder = folder || ''
+    const self = this;
+    folder = folder || '';
     if (this.registerFormat) {
       archiver.registerFormat(this.registerFormat, this.formatModule)
     }
